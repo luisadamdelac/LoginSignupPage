@@ -1,0 +1,97 @@
+body {
+  background: linear-gradient(135deg, #4f8cff 0%, #a6e1fa 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background: #fff;
+  padding: 2.5em 2em 2em 2em;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(79, 140, 255, 0.18);
+  width: 100%;
+  max-width: 350px;
+}
+
+.form h2 {
+  text-align: center;
+  color: #4f8cff;
+  margin-bottom: 1.5em;
+  font-weight: 700;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.3em;
+  color: #333;
+  font-weight: 500;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 1.2em;
+  border: 1px solid #d1e3fa;
+  border-radius: 6px;
+  background: #f7fbff;
+  font-size: 1em;
+  transition: border 0.2s;
+}
+
+.form input:focus {
+  border: 1.5px solid #4f8cff;
+  outline: none;
+}
+
+.form button {
+  width: 100%;
+  padding: 0.8em;
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form button:hover {
+  background: #2560be;
+}
+
+.form-link {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 0.95em;
+}
+
+.form-link a {
+  color: #4f8cff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-link a:hover {
+  text-decoration: underline;
+}
+
+.form-message {
+  color: red;
+  text-align: center;
+  display: none;
+  margin-top: 0.5em;
+  font-size: 0.95em;
+}
+
+@media (max-width: 500px) {
+  .form-container {
+    padding: 1.2em;
+    max-width: 95%;
+  }
+}
+

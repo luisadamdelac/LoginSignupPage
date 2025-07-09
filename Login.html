@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Login</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="form-container">
+    <form class="form" id="loginForm">
+      <h2>🎓 Student Login</h2>
+      <label for="login-username">Student ID</label>
+      <input type="text" id="login-username" name="login-username" placeholder="Enter your student ID" required>
+      <label for="login-password">Password</label>
+      <input type="password" id="login-password" name="login-password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+      <p class="form-link">Don't have an account? <a href="signup.html">Sign up</a></p>
+      <p id="login-message" class="form-message"></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      var username = document.getElementById('login-username').value.trim();
+      var password = document.getElementById('login-password').value.trim();
+      var message = document.getElementById('login-message');
+      if (!username || !password) {
+        event.preventDefault();
+        message.textContent = 'Please enter both Student ID and Password.';
+        message.style.display = 'block';
+      } else {
+        message.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

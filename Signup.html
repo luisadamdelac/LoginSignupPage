@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Sign Up</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div class="form-container">
+    <form class="form" id="signupForm">
+      <h2>🎓 Student Sign Up</h2>
+      <label for="signup-username">Student ID</label>
+      <input type="text" id="signup-username" name="signup-username" placeholder="Choose your student ID" required>
+      <label for="signup-password">Password</label>
+      <input type="password" id="signup-password" name="signup-password" placeholder="Create a password" required>
+      <label for="signup-confirm">Confirm Password</label>
+      <input type="password" id="signup-confirm" name="signup-confirm" placeholder="Repeat your password" required>
+      <button type="submit">Sign Up</button>
+      <p class="form-link">Already have an account? <a href="login.html">Login</a></p>
+      <p id="signup-message" class="form-message"></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById('signupForm').addEventListener('signup', function(event) {
+      var username = document.getElementById('signup-username').value.trim();
+      var password = document.getElementById('signup-password').value.trim();
+      var confirmPassword = document.getElementById('signup-confirm').value.trim();
+      var message = document.getElementById('signup-message');
+      if (!username || !password || !confirm) {
+        event.preventDefault();
+        message.textContent = 'All fields are required.';
+        message.style.display = 'block';
+      } else {
+      message.style.display = 'none';      }
+    });
+  </script>
+</body>
+</html>
